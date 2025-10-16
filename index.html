@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Ask AI (OpenRouter — frontend only)</title>
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    #response { margin-top: 15px; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h2>Ask AI Anything</h2>
+  <input id="userInput" type="text" placeholder="Type something..." style="width: 300px;">
+  <button id="askBtn">Ask</button>
+  <div id="response"></div>
+
+  <script>
+    const API_URL = "https://openrouter.ai/api/v1/chat/completions";
+    const API_KEY = "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"; // restrict to your origin in OpenRouter settings
+
+    const input = document.getElementById("userInput");
+    const resBox = document.getElementById("response");
+    const btn = document.getElementById("askBtn");
+
+    async function askAI() {
+      const message = input.value.trim();
+      if (!message) return;
+      resBox.textContent = "Thinking... 🤔";
+
+      try {
+        const response = await fetch(API_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${API_KEY}`,
+            // Optional, helps OpenRouter label your app
+            "X-Title": "Ask AI Demo"
+          },
+          body: JSON.stringify({
+            // Use an OpenRouter model ID
+            model: "openai/gpt-4o-mini", // or "meta-llama/llama-3.1-8b-instruct", "google/gemma-2-9b-it", etc.
+            messages: [
+              { role: "system", content: "You are a helpful assistant." },
+              { role: "user", content: message }
+            ]
+          })
+        });
+
+        const data = await response.json();
+        if (!response.ok) {
+          resBox.textContent = `Error: ${data.error?.message || data.error || response.statusText}`;
+          return;
+        }
+        resBox.textContent = data.choices?.[0]?.message?.content || "(no content)";
+      } catch (err) {
+        console.error(err);
+        resBox.textContent = "Network error. See console.";
+      }
+    }
+
+    btn.addEventListener("click", askAI);
+    input.addEventListener("keydown", (e) => { if (e.key === "Enter") askAI(); });
+  </script>
+</body>
+</html>
