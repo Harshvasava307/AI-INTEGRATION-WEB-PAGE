@@ -26,7 +26,7 @@
     async function askAI() {
       const message = input.value.trim();
       if (!message) return;
-      resBox.textContent = "Thinking... 🤔";
+      resBox.textContent = "Thinking.......";
 
       try {
         const response = await fetch(API_URL, {
