@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — ECHO AI</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #202123;
+            color: #ececf1;
+        }
+
+        /* Sidebar */
+        .sidebar {
+
+            padding: 20px;
+            border-radius: 12px;
+            height: 80vh;
+            overflow-y: auto;
+            position: sticky;
+            top: 80px;
+            /* offset for fixed navbar */
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .sidebar ul li a {
+            display: block;
+            padding: 10px 15px;
+            color: #ececf1;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .sidebar ul li a:hover,
+        .sidebar ul li a.active {
+            background: #10a37f;
+            color: #fff;
+        }
+
+        /* Main content */
+        .main-content {
+
+            border-radius: 12px;
+            padding: 20px;
+            min-height: 80vh;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .sidebar {
+                height: auto;
+                position: relative;
+                top: 0;
+                margin-bottom: 20px;
+            }
+        }
+
+        footer {
+            border-top: 1px solid #2a2b35;
+        }
+
+        footer h5 {
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        footer a:hover svg {
+            fill: #10a37f;
+        }
+
+        footer svg {
+            vertical-align: middle;
+            fill: #ececf1;
+            transition: fill 0.2s;
+        }
+
+        @media (max-width: 768px) {
+            footer .row>div {
+                text-align: center;
+            }
+
+            footer .d-flex {
+                justify-content: center;
+            }
+
+            footer a {
+                display: inline-block;
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand text-success" href="index.html">ECHO AI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="container mt-5 pt-5">
+        <div class="row gap-3">
+
+            <!-- Left Sidebar -->
+            <nav class="col-12 col-md-3 sidebar">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="#echo-ai">Echo AI</a></li>
+                    <li><a href="#tools-used">Tools Used</a></li>
+                    <li><a href="#developer">Developer</a></li>
+                    <li><a href="#contact-us">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- Right Main Content -->
+            <div class="col-12 col-md-8 main-content">
+                <!-- Echo AI Section -->
+                <section id="echo-ai">
+                    <h3>About ECHO AI</h3>
+                    <p>
+                        ECHO AI is a demonstration application designed to help students understand how APIs work in
+                        modern web
+                        development using JavaScript. At its core, the application allows users to interact with
+                        multiple AI models,
+                        sending input data to an API and receiving a response in real-time. This helps students see a
+                        practical
+                        example of asynchronous programming, HTTP requests, and data processing.
+                    </p>
+                    <p>
+                        The application structure is straightforward. It uses a front-end built with HTML, CSS, and
+                        JavaScript. When
+                        a user types a message and hits send, JavaScript captures that input and sends it as a request
+                        to the AI
+                        API. The API processes the message using its trained model and returns a structured response,
+                        which is then
+                        displayed in the chat window. This cycle mimics real-world applications where APIs handle
+                        complex
+                        operations on the server side.
+                    </p>
+                    <p>
+                        Students can experiment by changing the selected AI model. Each model behaves differently,
+                        showing how the
+                        API endpoint can accept parameters to customize responses. This reinforces the concept that APIs
+                        are
+                        flexible interfaces that allow developers to access functionality without exposing the internal
+                        implementation.
+                    </p>
+                    <p>
+                        From a learning perspective, ECHO AI emphasizes several key JavaScript concepts. Students learn
+                        about the
+                        Fetch API, Promises, async/await syntax, and DOM manipulation. The chat box updates dynamically
+                        using
+                        JavaScript, providing immediate feedback to the user without requiring a page reload. This
+                        teaches the
+                        principle of single-page application behavior.
+                    </p>
+                    <p>
+                        Additionally, the project highlights error handling. If an API request fails or the model is
+                        unavailable,
+                        JavaScript code gracefully handles the error, displaying a message to the user. This is an
+                        essential skill
+                        in real-world applications, showing students how to build robust web apps.
+                    </p>
+                    <p>
+                        By studying this section, students gain a practical understanding of the API request-response
+                        cycle,
+                        asynchronous programming in JavaScript, and integration of front-end and back-end services. They
+                        also
+                        understand how to structure projects, create modular code, and maintain clean separation between
+                        UI and
+                        data logic.
+                    </p>
+                    <p>
+                        In short, ECHO AI acts as a mini-laboratory for students. They can experiment, inspect network
+                        requests,
+                        and even modify the JavaScript to log API responses or simulate different scenarios. This
+                        hands-on
+                        approach ensures that theoretical concepts like REST, endpoints, and JSON payloads become
+                        tangible and easy
+                        to understand.
+                    </p>
+                </section>
+
+                <!-- Tools Used Section -->
+                <section id="tools-used" class="mt-5">
+                    <h4>Tools Used</h4>
+                    <p>
+                        To build ECHO AI, several modern web development tools were utilized. The front-end uses
+                        **HTML** for
+                        structure, **CSS** for styling, and **JavaScript** for interactivity. This combination forms the
+                        foundation
+                        for building dynamic web applications.
+                    </p>
+                    <p>
+                        **Bootstrap 5** is used for responsive design, ensuring the interface works well on both desktop
+                        and mobile
+                        devices. Students can see how CSS frameworks simplify layout, spacing, and alignment without
+                        writing
+                        custom media queries.
+                    </p>
+                    <p>
+                        **JavaScript** is the backbone of API interaction. Using the Fetch API, ECHO AI sends HTTP
+                        requests to
+                        AI endpoints and handles responses. Students learn how to structure requests with headers,
+                        parameters,
+                        and payloads, and how to process JSON responses efficiently.
+                    </p>
+                    <p>
+                        **Marked.js** is included to render any Markdown-formatted text returned by the AI. This
+                        demonstrates
+                        how third-party libraries can extend functionality without building everything from scratch.
+                    </p>
+                    <p>
+                        Error handling tools and logging techniques are also implemented. Students can inspect console
+                        logs to
+                        understand what data is being sent and received, how errors are caught, and how fallback
+                        messages are
+                        displayed in the UI.
+                    </p>
+                    <p>
+                        For development, **VS Code** is recommended, along with its live server extension. This allows
+                        students
+                        to immediately see changes in the browser when editing HTML or JavaScript. They learn the
+                        iterative process
+                        of coding, testing, and debugging.
+                    </p>
+                    <p>
+                        Version control using **Git/GitHub** is encouraged. Students can track changes, commit code, and
+                        even
+                        experiment with branching features, which is standard practice in collaborative software
+                        development.
+                    </p>
+                    <p>
+                        Overall, this section illustrates how multiple tools integrate to create a functional,
+                        educational
+                        web app. Students understand the workflow from development environment setup, coding, testing,
+                        and
+                        finally deploying the application.
+                    </p>
+                </section>
+
+                <!-- Developer Section -->
+                <section id="developer" class="mt-5">
+                    <h4>Developer</h4>
+                    <p>
+                        ECHO AI was developed by <strong>Harsh Vasava</strong>, a full-stack web developer with
+                        experience in
+                        building interactive web applications. The developer focused on creating an educational platform
+                        where
+                        students can learn about APIs and JavaScript through hands-on experimentation.
+                    </p>
+                    <p>
+                        The approach emphasizes clean code practices, modular development, and clear documentation.
+                        Students
+                        can review the JavaScript code to understand how functions are organized, how asynchronous code
+                        is
+                        managed, and how UI updates are handled efficiently.
+                    </p>
+                    <p>
+                        In addition, the developer has included meaningful comments in the codebase to guide students
+                        through
+                        each step. This is an excellent learning method as it bridges the gap between reading code and
+                        understanding its execution.
+                    </p>
+                    <p>
+                        The project also demonstrates API integration patterns, error handling, and response parsing —
+                        all
+                        essential skills for students aiming to become proficient in web development.
+                    </p>
+                    <p>
+                        By observing the design and implementation choices, students gain insight into best practices
+                        for
+                        front-end development, UI/UX considerations, and responsive design using Bootstrap.
+                    </p>
+                    <p>
+                        Moreover, the developer emphasizes simplicity and educational clarity over complex
+                        production-ready code,
+                        making it easier for students to grasp fundamental concepts.
+                    </p>
+                    <p>
+                        The project can also be extended by students to experiment with additional features, such as
+                        storing
+                        chat history locally, adding custom AI prompts, or integrating new AI models. This encourages
+                        exploration and hands-on learning.
+                    </p>
+                </section>
+
+                <!-- Contact Section -->
+                <section id="contact-us" class="mt-5">
+                    <h4>Contact Us</h4>
+                    <p>
+                        Students and developers can contact the project developer for guidance, queries, or
+                        collaboration
+                        opportunities. The primary contact method is via email, which is actively monitored for
+                        questions
+                        regarding the educational use of ECHO AI.
+                    </p>
+                    <p>Email: <a href="mailto:hardyvsv9@gmail.com">hardyvsv9@gmail.com</a></p>
+                    <p>Phone: 7984403981</p>
+                    <p>
+                        This section also emphasizes the importance of professional communication when interacting with
+                        developers
+                        or mentors. Students are encouraged to ask clear, concise questions and provide context for
+                        better
+                        responses.
+                    </p>
+                    <p>
+                        Additionally, students can use this section to provide feedback about the project, report any
+                        issues
+                        encountered while experimenting with APIs, or suggest new features.
+                    </p>
+                    <p>
+                        By including contact information, the page models real-world practices in project documentation
+                        and
+                        user support. Students learn that maintaining clear communication channels is essential in
+                        software
+                        development and open-source projects.
+                    </p>
+                </section>
+
+            </div>
+
+        </div>
+    </main>
+
+
+    <footer class="bg-dark text-light pt-4 pb-3 mt-5">
+        <div class="container">
+            <div class="row">
+
+                <!-- Quick Links -->
+                <div class="col-12 col-md-4 mb-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                        <li><a href="about.html" class="text-light text-decoration-none">About</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-12 col-md-4 mb-3">
+                    <h5>Contact</h5>
+                    <p class="mb-1">📞 +91 7984403981</p>
+                    <p class="mb-1">✉️ hardyvsv9@gmail.com</p>
+                </div>
+
+                <!-- Social Media Icons -->
+                <div class="col-12 col-md-4 mb-3">
+                    <h5>Follow Me</h5>
+                    <div class="d-flex gap-3">
+                        <a href="https://github.com/Harshvasava307" target="_blank" class="text-light">
+                            <!-- GitHub SVG -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-github" viewBox="0 0 16 16">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+                         0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
+                         -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89
+                         -3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 2
+                         -.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15
+                         0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013
+                         8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                            </svg>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/harsh-vasava-b8b4b8214/" target="_blank"
+                            class="text-light">
+                            <!-- LinkedIn SVG -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0
+                         .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2
+                         -8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.521-1.247-1.342-1.247-.821 0-1.357.538-1.357
+                         1.247 0 .694.52 1.248 1.327 1.248h.014zm4.908 8.212h2.4v-4.099c0-.219.016-.438.08-.595.175-.438.574-.892
+                         1.244-.892.877 0 1.228.673 1.228 1.66v3.926h2.4V9.135c0-2.223-1.184-3.252-2.762-3.252-1.274 0-1.845.7
+                         -2.165 1.194h.031v-1.026h-2.4c.03.671 0 7.225 0 7.225z" />
+                            </svg>
+                        </a>
+
+                        <a href="https://www.instagram.com/harsh_vasava307/" target="_blank" class="text-light">
+                            <!-- Instagram SVG -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-instagram" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0C5.8 0 5.555.01 4.694.048 3.838.086 3.264.24 2.787.414a3.58 3.58 0 0 0-1.297.845
+                         3.58 3.58 0 0 0-.845 1.297c-.174.477-.328 1.051-.366 1.907C.01 5.555 0 5.8 0 8s.01 2.445.048
+                         3.306c.038.856.192 1.43.366 1.907.198.552.46 1.037.845 1.297.384.261.772.54 1.297.845.477.174
+                         1.051.328 1.907.366C5.555 15.99 5.8 16 8 16s2.445-.01 3.306-.048c.856-.038 1.43-.192
+                         1.907-.366a3.58 3.58 0 0 0 1.297-.845 3.58 3.58 0 0 0 .845-1.297c.174-.477.328-1.051.366-1.907.038-.861.048-1.106.048-3.306s-.01-2.445-.048-3.306c-.038-.856-.192-1.43-.366-1.907a3.58 3.58 0 0 0-.845-1.297
+                         3.58 3.58 0 0 0-1.297-.845c-.477-.174-1.051-.328-1.907-.366C10.445.01 10.2 0 8 0zm0
+                         1.44c2.167 0 2.427.008 3.283.047.791.037 1.218.167 1.502.278.38.141.65.31.935.595.285.285.454.555.595.935.111.284.241.711.278 1.502.039.856.047 1.116.047
+                         3.283s-.008 2.427-.047 3.283c-.037.791-.167 1.218-.278 1.502a2.53 2.53 0 0 1-.595.935 2.53 2.53 0 0 1-.935.595c-.284.111-.711.241-1.502.278-.856.039-1.116.047-3.283.047s-2.427-.008-3.283-.047c-.791-.037-1.218-.167-1.502-.278a2.53 2.53 0 0 1-.935-.595 2.53 2.53 0 0 1-.595-.935c-.111-.284-.241-.711-.278-1.502-.039-.856-.047-1.116-.047-3.283s.008-2.427.047-3.283c.037-.791.167-1.218.278-1.502a2.53 2.53 0 0 1 .595-.935 2.53 2.53 0 0 1 .935-.595c.284-.111.711-.241 1.502-.278.856-.039 1.116-.047 3.283-.047z" />
+                                <path
+                                    d="M8 3.838a4.162 4.162 0 1 0 0 8.324 4.162 4.162 0 0 0 0-8.324zm0 6.833a2.671 2.671 0 1 1 0-5.342 2.671 2.671 0 0 1 0 5.342z" />
+                                <circle cx="12.5" cy="3.5" r="1" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-3">
+                &copy; 2025 Harsh Vasava. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
